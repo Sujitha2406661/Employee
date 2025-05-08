@@ -1,0 +1,31 @@
+﻿@model IEnumerable<dynamic> // Use dynamic or create a specific model class
+
+@{
+    ViewData["Title"] = "Employee Report";
+}
+
+<h1>Employee Report</h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Employee ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Designation</th>
+            <th>Organization</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.EmployeeId</td>
+                <td>@item.Name</td>
+                <td>@item.Email</td>
+                <td>@item.Designation</td>
+                <td>@item.OrganizationName</td>
+            </tr>
+        }
+    </tbody>
+</table>

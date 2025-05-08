@@ -1,0 +1,31 @@
+﻿@model IEnumerable<dynamic> // Use dynamic or create a specific model class
+
+@{
+    ViewData["Title"] = "Policy Report";
+}
+
+<h1>Policy Report</h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Policy ID</th>
+            <th>Policy Name</th>
+            <th>Coverage Amount</th>
+            <th>Premium Amount</th>
+            <th>Policy Type</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.PolicyId</td>
+                <td>@item.PolicyName</td>
+                <td>@item.CoverageAmount</td>
+                <td>@item.PremiumAmount</td>
+                <td>@item.PolicyType</td>
+            </tr>
+        }
+    </tbody>
+</table>
